@@ -1,0 +1,137 @@
+/* Global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #6A0572, #0BC4C5);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  input {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #FFD700;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+  }
+  
+  button {
+    padding: 12px 20px;
+    border: none;
+    background: linear-gradient(90deg, #F53803, #F5D020);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.4s;
+    box-shadow: 0 6px 20px rgba(245, 208, 32, 0.4);
+  }
+  
+  button:hover {
+    background: linear-gradient(90deg, #F5D020, #F53803);
+    transform: scale(1.05);
+  }
+  
+  /* Weather Info Box */
+  .weather-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 2px solid #FFD700;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .weather-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(255, 215, 0, 0.6);
+  }
+  
+  .weather-box h2, .weather-box p, .weather-box h5 {
+    margin-bottom: 10px;
+    color: #333;
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  h2 {
+    font-size: 28px;
+  }
+  
+  p, h5 {
+    font-size: 18px;
+  }
+  
+  .error {
+    color: #E94F37;
+    font-size: 18px;
+    margin-top: 20px;
+    animation: shake 0.5s;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+  }
